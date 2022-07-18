@@ -1,0 +1,489 @@
+/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import './variables.scss';
+
+body {
+    @extend .color-1;
+    @extend .background-2;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    //font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline-color: $brand-2;
+    outline-offset: -10px;
+}
+
+.primary-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    @extend .nav-background;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+    //border-bottom: 1px solid $brand-3;
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1rem;
+        justify-content: right;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        text-transform: uppercase;
+
+        li {
+            position: relative;
+            display: inline-block;
+            height: 100%;
+            line-height: 4rem;
+
+            &:last-child {
+                margin-right: 1rem;
+            }
+
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 0 1rem;
+                text-decoration: none;
+                transition: color 200ms ease;
+                box-sizing: border-box;
+                @extend .color-5;
+
+                &:hover {
+                    @extend .color-1;
+
+                    &::after {
+                        left: 0%;
+                        right: 0%;
+                    }
+                }
+
+                &:focus {
+                    @extend .color-1;
+
+                    &::after {
+                        left: 0%;
+                        right: 0%;
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    transition: all 200ms ease;
+                    position: absolute;
+                    left: 100%;
+                    right: 100%;
+                    display: block;
+                    height: 0.25rem;
+                    background-color: $brand-2;
+                    bottom: 0rem;
+                }
+            }
+
+            .toggle {
+                display: block;
+                width: 1rem;
+                height: 1rem;
+                margin: 1.4rem 1rem;
+                padding: 0 2rem;
+                text-decoration: none;
+                transition: color 200ms ease;
+                box-sizing: border-box;
+                outline-offset: 10px;
+                @extend .color-5;
+
+                &:hover {
+                    @extend .color-1;
+
+                    &::after {
+                        left: 0%;
+                        right: 0%;
+                    }
+                }
+
+                &:focus {
+                    @extend .color-1;
+
+                    &::after {
+                        left: 0%;
+                        right: 0%;
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    transition: all 200ms ease;
+                    position: absolute;
+                    left: 100%;
+                    right: 100%;
+                    display: block;
+                    height: 0.25rem;
+                    background-color: $brand-2;
+                    bottom: 0rem;
+                }
+            }
+
+            // .toggle {
+            //     margin-right: 1rem;
+            //     @extend .toggle-default;
+            //     appearance: none;
+            //     font: inherit;
+            //     box-sizing: border-box;
+            //     width: 1rem;
+            //     height: 1rem;
+            //     border-radius: 0.5em;
+            //     transition: all 200ms ease;
+            //     transform: translateY(0.25em);
+            //     outline-color: $brand-2;
+            //     outline-offset: 8px;
+            //     &:checked::before {
+            //         box-shadow: inset 0.321em 0em $lm_background-2;
+            //     }
+
+            //     &:hover {
+            //         cursor: pointer;
+            //         @extend .toggle-hover;
+
+            //         &::after {
+            //             left: -15%;
+            //             right: -15%;
+            //         }
+            //     }
+
+            //     &:focus {
+            //         @extend .toggle-hover;
+
+            //         &::after {
+            //             left: -15%;
+            //             right: -15%;
+            //         }
+            //     }
+
+            //     &::before {
+            //         content: '';
+            //         position: absolute;
+            //         top: 0.1em;
+            //         bottom: 0.1em;
+            //         right: 0.1em;
+            //         left: 0.1em;
+            //         border-radius: 50%;
+            //         box-shadow: inset 0.321em 0em $background-2;
+            //     }
+
+            //     &::after {
+            //         content: '';
+            //         transition: all 200ms ease;
+            //         position: absolute;
+            //         left: 100%;
+            //         right: 100%;
+            //         display: block;
+            //         height: 0.25rem;
+            //         background-color: $brand-2;
+            //         bottom: -1.6rem;
+            //         outline-offset: -10px;
+            //     }
+            // }
+        }
+    }
+}
+
+.hidden {
+    opacity: 0;
+    position: absolute;
+    top: -20000000000px;
+    left: -20000000000px;
+}
+
+main {
+    height: auto;
+    margin: 5rem 2rem 2rem 2rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+button {
+    appearance: none;
+    display: block;
+    padding: 0.5rem 1rem;
+    border: none;
+    transition: color 200ms ease;
+    box-sizing: border-box;
+    @extend .color-5;
+    background: none;
+    backdrop-filter: blur(5px);
+
+    &:hover {
+        @extend .color-1;
+        cursor: pointer;
+
+        &::after {
+            left: 0%;
+            right: 0%;
+        }
+    }
+
+    &:focus {
+        @extend .color-1;
+        outline-offset: 5px;
+
+        &::after {
+            left: 0%;
+            right: 0%;
+        }
+    }
+
+    &::after {
+        content: '';
+        transition: all 200ms ease;
+        position: absolute;
+        left: 100%;
+        right: 100%;
+        display: block;
+        height: 0.25rem;
+        background-color: $brand-2;
+        bottom: 0rem;
+    }
+}
+
+.videoContainer {
+    box-sizing: border-box;
+    border: 0px solid transparent;
+    position: relative;
+    z-index: 1;
+    width: 75%;
+    //transition: all 200ms ease;
+    color: $color-3;
+    video {
+        width: 100%;
+    }
+    .controlsContainer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-inline: 1rem;
+        .seeker {
+            position: absolute;
+            bottom: 3rem;
+            left: 0;
+            right: 0;
+            height: 5px;
+            &:hover {
+                cursor: pointer;
+            }
+            .seekerBar {
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+            .seekerPreload {
+                position: absolute;
+                left: 0;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+            .seekerCurrent {
+                left: 0;
+                position: absolute;
+                height: 100%;
+                background-color: rgba(255, 0, 0, 0.5);
+                transition: width 100ms linear;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: -2.5px;
+                    top: -2.5px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 100%;
+                    background-color: red;
+                }
+            }
+        }
+        .controlsLeft {
+            position: absolute;
+            left: 0;
+            bottom: 0.5rem;
+            .videoTime {
+                display: inline;
+            }
+        }
+        .controlsRight {
+            position: absolute;
+            right: 0;
+            bottom: 0.5rem;
+        }
+    }
+    button {
+        display: inline;
+        background: none;
+        backdrop-filter: none;
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.card {
+    box-sizing: border-box;
+    border: 0px solid transparent;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 20vw;
+    transition: all 200ms ease;
+    color: $color-3;
+
+    >img {
+        position: absolute;
+        filter: blur(0px);
+        height: 100%;
+        z-index: 1;
+    }
+
+    .cardBackground {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, hsla(230, 23%, 5%, 0.2) 0%, hsla(224, 12.5%, 5%, 0.2) 50%, hsla(224, 25%, 5%, 0.2) 100%);
+        z-index: 2;
+    }
+
+    .cardCloseButton {
+        color: $color-3 !important;
+    }
+
+    &.open {
+        position: fixed;
+        top: 4rem;
+        bottom: 0rem;
+        left: 0rem;
+        right: 0rem;
+        height: auto;
+        width: auto;
+        z-index: 5;
+        border-radius: 0;
+
+        .cardBackground {
+            backdrop-filter: blur(5px);
+        }
+
+        .cardCloseButton {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 2;
+            opacity: 1;
+        }
+
+        .cardHeading {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            position: absolute;
+            top: 2rem;
+            left: 1rem;
+            right: 1rem;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .cardContent {
+            position: absolute;
+            top: 6rem;
+            left: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+            height: auto;
+            overflow-y: auto;
+            z-index: 2;
+        }
+    }
+
+    &:not(.open) {
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0px 0px 6px 3px $brand-3;
+            z-index: 5;
+            transform: translateY(-2px);
+
+            >img {
+                filter: blur(2px);
+            }
+        }
+
+        .cardCloseButton {
+            opacity: 0;
+        }
+
+        .cardHeading {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            position: absolute;
+            bottom: 0.5rem;
+            left: 1rem;
+            right: 0;
+            z-index: 2;
+        }
+
+        .cardContent {
+            position: absolute;
+            top: calc(100% - 2rem);
+            left: 1rem;
+            right: 5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 1.2rem;
+            z-index: 2;
+        }
+    }
+}
+
+/*Medias*/
+@media all and (min-width:1025px) {}
+
+@media all and (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 959px) {}
+
+@media all and (max-width: 800px) {}
+
+@media all and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 668px) {}
+
+@media all and (max-width: 568px) {}
+
+@media all and (max-width: 490px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 320px) {}
