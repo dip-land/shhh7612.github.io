@@ -1,11 +1,12 @@
 /* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* BRAND COLORS */
 /* COLORS */
-.default .color-1, .default button:focus, .default button:hover, .default .primary-nav ul li .toggle:focus, .primary-nav ul li .default .toggle:focus, .default .primary-nav ul li .toggle:hover, .primary-nav ul li .default .toggle:hover, .default .primary-nav ul li a:focus, .primary-nav ul li .default a:focus, .default .primary-nav ul li a:hover, .primary-nav ul li .default a:hover, .default body {
+.default .color-1, .default .primary-nav ul li .toggle:focus, .primary-nav ul li .default .toggle:focus, .default .primary-nav ul li .toggle:hover, .primary-nav ul li .default .toggle:hover, .default .primary-nav ul li a:focus, .primary-nav ul li .default a:focus, .default .primary-nav ul li a:hover, .primary-nav ul li .default a:hover, .default body {
   color: white;
 }
 
-.light_mode .color-1, .light_mode button:focus, .light_mode button:hover, .light_mode .primary-nav ul li .toggle:focus, .primary-nav ul li .light_mode .toggle:focus, .light_mode .primary-nav ul li .toggle:hover, .primary-nav ul li .light_mode .toggle:hover, .light_mode .primary-nav ul li a:focus, .primary-nav ul li .light_mode a:focus, .light_mode .primary-nav ul li a:hover, .primary-nav ul li .light_mode a:hover, .light_mode body {
+.light_mode .color-1, .light_mode .primary-nav ul li .toggle:focus, .primary-nav ul li .light_mode .toggle:focus, .light_mode .primary-nav ul li .toggle:hover, .primary-nav ul li .light_mode .toggle:hover, .light_mode .primary-nav ul li a:focus, .primary-nav ul li .light_mode a:focus, .light_mode .primary-nav ul li a:hover, .primary-nav ul li .light_mode a:hover, .light_mode body {
   color: black;
 }
 
@@ -33,11 +34,11 @@
   color: #262626;
 }
 
-.default .color-5, .default button, .default .primary-nav ul li .toggle, .primary-nav ul li .default .toggle, .default .primary-nav ul li a, .primary-nav ul li .default a {
+.default .color-5, .default .primary-nav ul li .toggle, .primary-nav ul li .default .toggle, .default .primary-nav ul li a, .primary-nav ul li .default a {
   color: #cccccc;
 }
 
-.light_mode .color-5, .light_mode button, .light_mode .primary-nav ul li .toggle, .primary-nav ul li .light_mode .toggle, .light_mode .primary-nav ul li a, .primary-nav ul li .light_mode a {
+.light_mode .color-5, .light_mode .primary-nav ul li .toggle, .primary-nav ul li .light_mode .toggle, .light_mode .primary-nav ul li a, .primary-nav ul li .light_mode a {
   color: #333333;
 }
 
@@ -51,46 +52,46 @@
 
 /* BACKGROUND COLORS */
 .default .background-1 {
-  background: linear-gradient(180deg, #181c28 0%, #1c1e24 50%, #181c28 100%);
+  background: #1c1e24;
 }
 
 .light_mode .background-1 {
-  background: linear-gradient(180deg, #eff1f5 0%, #f1f2f4 50%, #eff1f5 100%);
+  background: #f1f2f4;
 }
 
-.default .background-2, .default body {
-  background: linear-gradient(180deg, #131720 0%, #16181d 50%, #131720 100%);
+.default .background-2, .default button:after, .default body {
+  background: #16181d;
 }
 
-.light_mode .background-2, .light_mode body {
-  background: linear-gradient(180deg, #dfe3ec 0%, #e2e4e9 50%, #dfe3ec 100%);
+.light_mode .background-2, .light_mode button:after, .light_mode body {
+  background: #e2e4e9;
 }
 
 .default .background-3 {
-  background: linear-gradient(180deg, #0e1118 0%, #111216 50%, #0e1118 100%);
+  background: #111216;
 }
 
 .light_mode .background-3 {
-  background: linear-gradient(180deg, #cfd4e2 0%, #d4d7de 50%, #cfd4e2 100%);
+  background: #d4d7de;
 }
 
 .default .background-4 {
-  background: linear-gradient(180deg, #0a0b10 0%, #0b0c0e 50%, #0a0b10 100%);
+  background: #0b0c0e;
 }
 
 .light_mode .background-4 {
-  background: linear-gradient(180deg, #bfc6d9 0%, #c6c9d2 50%, #bfc6d9 100%);
+  background: #c6c9d2;
 }
 
 .default .background-5 {
-  background: linear-gradient(180deg, #050608 0%, #060607 50%, #050608 100%);
+  background: #060607;
 }
 
 .light_mode .background-5 {
-  background: linear-gradient(180deg, #afb8cf 0%, #b7bcc7 50%, #afb8cf 100%);
+  background: #b7bcc7;
 }
 
-/* BRAND COLORS */
+/* SPECIAL */
 .light_mode .brand {
   color: white;
   background-color: #f53d56 !important;
@@ -101,7 +102,6 @@
   background-color: #e61a35 !important;
 }
 
-/* SPECIAL */
 .default .nav-background, .default .primary-nav {
   background: linear-gradient(180deg, rgba(24, 28, 40, 0.9) 0%, rgba(24, 28, 40, 0.1) 100%);
 }
@@ -241,42 +241,6 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-button {
-  appearance: none;
-  display: block;
-  padding: 0.5rem 1rem;
-  border: none;
-  transition: color 200ms ease;
-  box-sizing: border-box;
-  background: none;
-  backdrop-filter: blur(5px);
-}
-button:hover {
-  cursor: pointer;
-}
-button:hover::after {
-  left: 0%;
-  right: 0%;
-}
-button:focus {
-  outline-offset: 5px;
-}
-button:focus::after {
-  left: 0%;
-  right: 0%;
-}
-button::after {
-  content: "";
-  transition: all 200ms ease;
-  position: absolute;
-  left: 100%;
-  right: 100%;
-  display: block;
-  height: 0.25rem;
-  background-color: #fb5168;
-  bottom: 0rem;
-}
-
 .videoContainer {
   box-sizing: border-box;
   border: 0px solid transparent;
@@ -357,111 +321,6 @@ button::after {
   display: none;
 }
 
-.card {
-  box-sizing: border-box;
-  border: 0px solid transparent;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  width: 100%;
-  height: 20vw;
-  transition: all 200ms ease;
-  color: #e6e6e6;
-}
-.card > img {
-  position: absolute;
-  filter: blur(0px);
-  height: 100%;
-  z-index: 1;
-}
-.card .cardBackground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(180deg, rgba(10, 11, 16, 0.2) 0%, rgba(11, 12, 14, 0.2) 50%, rgba(10, 11, 16, 0.2) 100%);
-  z-index: 2;
-}
-.card .cardCloseButton {
-  color: #e6e6e6 !important;
-}
-.card.open {
-  position: fixed;
-  top: 4rem;
-  bottom: 0rem;
-  left: 0rem;
-  right: 0rem;
-  height: auto;
-  width: auto;
-  z-index: 5;
-  border-radius: 0;
-}
-.card.open .cardBackground {
-  backdrop-filter: blur(5px);
-}
-.card.open .cardCloseButton {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  z-index: 2;
-  opacity: 1;
-}
-.card.open .cardHeading {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  position: absolute;
-  top: 2rem;
-  left: 1rem;
-  right: 1rem;
-  text-align: center;
-  z-index: 2;
-}
-.card.open .cardContent {
-  position: absolute;
-  top: 6rem;
-  left: 1rem;
-  right: 1rem;
-  bottom: 1rem;
-  height: auto;
-  overflow-y: auto;
-  z-index: 2;
-}
-.card:not(.open):hover {
-  cursor: pointer;
-  box-shadow: 0px 0px 6px 3px #f53d56;
-  z-index: 5;
-  transform: translateY(-2px);
-}
-.card:not(.open):hover > img {
-  filter: blur(2px);
-}
-.card:not(.open) .cardCloseButton {
-  opacity: 0;
-}
-.card:not(.open) .cardHeading {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  position: absolute;
-  bottom: 0.5rem;
-  left: 1rem;
-  right: 0;
-  z-index: 2;
-}
-.card:not(.open) .cardContent {
-  position: absolute;
-  top: calc(100% - 2rem);
-  left: 1rem;
-  right: 5rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  height: 1.2rem;
-  z-index: 2;
-}
-
 /*Medias*/
 @media all and (max-width: 1024px) {
   main {
@@ -477,4 +336,78 @@ button::after {
   main {
     grid-template-columns: 1fr 1fr;
   }
+}
+button,
+button:before {
+  background: #ea6e48;
+  background: -moz-linear-gradient(45deg, #ea6e48 0%, #bc1a63 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #ea6e48), color-stop(100%, #bc1a63));
+  background: -webkit-linear-gradient(45deg, #ea6e48 0%, #bc1a63 100%);
+  background: -o-linear-gradient(45deg, #ea6e48 0%, #bc1a63 100%);
+  background: -ms-linear-gradient(45deg, #ea6e48 0%, #bc1a63 100%);
+  background: linear-gradient(45deg, #ea6e48 0%, #bc1a63 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ea6e48", endColorstr="#bc1a63", GradientType=1 );
+}
+
+button:not(.accent) {
+  display: inline-block;
+  position: relative;
+  border-radius: 3px;
+  border: none;
+  text-decoration: none;
+  padding: 0.5em;
+  margin: 0.5em;
+  font-weight: bold;
+  transition: all 0.5s;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+button:not(.accent):hover {
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.75);
+}
+button:not(.accent):hover:after {
+  left: 100%;
+  top: 100%;
+  bottom: 100%;
+  right: 100%;
+}
+button:not(.accent):after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  bottom: 2px;
+  right: 2px;
+  z-index: -1;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+button:not(.accent):before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+button.accent {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.5s;
+  filter: hue-rotate(0deg);
+  color: #fff;
+  text-decoration: none;
+}
+button.accent:hover {
+  filter: hue-rotate(-35deg);
 }

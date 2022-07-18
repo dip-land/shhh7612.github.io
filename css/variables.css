@@ -1,3 +1,4 @@
+/* BRAND COLORS */
 /* COLORS */
 .default .color-1 {
   color: white;
@@ -49,46 +50,46 @@
 
 /* BACKGROUND COLORS */
 .default .background-1 {
-  background: linear-gradient(180deg, #181c28 0%, #1c1e24 50%, #181c28 100%);
+  background: #1c1e24;
 }
 
 .light_mode .background-1 {
-  background: linear-gradient(180deg, #eff1f5 0%, #f1f2f4 50%, #eff1f5 100%);
+  background: #f1f2f4;
 }
 
 .default .background-2 {
-  background: linear-gradient(180deg, #131720 0%, #16181d 50%, #131720 100%);
+  background: #16181d;
 }
 
 .light_mode .background-2 {
-  background: linear-gradient(180deg, #dfe3ec 0%, #e2e4e9 50%, #dfe3ec 100%);
+  background: #e2e4e9;
 }
 
 .default .background-3 {
-  background: linear-gradient(180deg, #0e1118 0%, #111216 50%, #0e1118 100%);
+  background: #111216;
 }
 
 .light_mode .background-3 {
-  background: linear-gradient(180deg, #cfd4e2 0%, #d4d7de 50%, #cfd4e2 100%);
+  background: #d4d7de;
 }
 
 .default .background-4 {
-  background: linear-gradient(180deg, #0a0b10 0%, #0b0c0e 50%, #0a0b10 100%);
+  background: #0b0c0e;
 }
 
 .light_mode .background-4 {
-  background: linear-gradient(180deg, #bfc6d9 0%, #c6c9d2 50%, #bfc6d9 100%);
+  background: #c6c9d2;
 }
 
 .default .background-5 {
-  background: linear-gradient(180deg, #050608 0%, #060607 50%, #050608 100%);
+  background: #060607;
 }
 
 .light_mode .background-5 {
-  background: linear-gradient(180deg, #afb8cf 0%, #b7bcc7 50%, #afb8cf 100%);
+  background: #b7bcc7;
 }
 
-/* BRAND COLORS */
+/* SPECIAL */
 .light_mode .brand {
   color: white;
   background-color: #f53d56 !important;
@@ -99,7 +100,6 @@
   background-color: #e61a35 !important;
 }
 
-/* SPECIAL */
 .default .nav-background {
   background: linear-gradient(180deg, rgba(24, 28, 40, 0.9) 0%, rgba(24, 28, 40, 0.1) 100%);
 }
