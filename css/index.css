@@ -1,141 +1,149 @@
 /* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* BRAND COLORS */
 /* COLORS */
-.default .color-1, .default .primary-nav ul li .toggle:focus, .primary-nav ul li .default .toggle:focus, .default .primary-nav ul li .toggle:hover, .primary-nav ul li .default .toggle:hover, .default .primary-nav ul li a:focus, .primary-nav ul li .default a:focus, .default .primary-nav ul li a:hover, .primary-nav ul li .default a:hover, .default body {
-  color: white;
+.default .color-1 {
+  color: hsl(0deg, 0%, 100%);
 }
 
-.light_mode .color-1, .light_mode .primary-nav ul li .toggle:focus, .primary-nav ul li .light_mode .toggle:focus, .light_mode .primary-nav ul li .toggle:hover, .primary-nav ul li .light_mode .toggle:hover, .light_mode .primary-nav ul li a:focus, .primary-nav ul li .light_mode a:focus, .light_mode .primary-nav ul li a:hover, .primary-nav ul li .light_mode a:hover, .light_mode body {
-  color: black;
+.light_mode .color-1 {
+  color: hsl(0deg, 0%, 0%);
 }
 
 .default .color-2 {
-  color: #f2f2f2;
+  color: hsl(0deg, 0%, 95%);
 }
 
 .light_mode .color-2 {
-  color: #0d0d0d;
+  color: hsl(0deg, 0%, 5%);
 }
 
 .default .color-3 {
-  color: #e6e6e6;
+  color: hsl(0deg, 0%, 90%);
 }
 
 .light_mode .color-3 {
-  color: #1a1a1a;
+  color: hsl(0deg, 0%, 10%);
 }
 
-.default .color-4 {
-  color: #d9d9d9;
+.default .color-4, .default body {
+  color: hsl(0deg, 0%, 85%);
 }
 
-.light_mode .color-4 {
-  color: #262626;
+.light_mode .color-4, .light_mode body {
+  color: hsl(0deg, 0%, 15%);
 }
 
-.default .color-5, .default .primary-nav ul li .toggle, .primary-nav ul li .default .toggle, .default .primary-nav ul li a, .primary-nav ul li .default a {
-  color: #cccccc;
+.default .color-5 {
+  color: hsl(0deg, 0%, 80%);
 }
 
-.light_mode .color-5, .light_mode .primary-nav ul li .toggle, .primary-nav ul li .light_mode .toggle, .light_mode .primary-nav ul li a, .primary-nav ul li .light_mode a {
-  color: #333333;
+.light_mode .color-5 {
+  color: hsl(0deg, 0%, 20%);
 }
 
 .default .color-6 {
-  color: #bfbfbf;
+  color: hsl(0deg, 0%, 75%);
 }
 
 .light_mode .color-6 {
-  color: #404040;
+  color: hsl(0deg, 0%, 25%);
 }
 
 /* BACKGROUND COLORS */
 .default .background-1 {
-  background: #1c1e24;
+  background: hsl(224deg, 12.5%, 12.5%);
 }
 
 .light_mode .background-1 {
-  background: #f1f2f4;
+  background: hsl(224deg, 12.5%, 95%);
 }
 
-.default .background-2, .default button:after, .default body {
-  background: #16181d;
+.default .background-2 {
+  background: hsl(224deg, 12.5%, 10%);
 }
 
-.light_mode .background-2, .light_mode button:after, .light_mode body {
-  background: #e2e4e9;
+.light_mode .background-2 {
+  background: hsl(224deg, 12.5%, 90%);
 }
 
 .default .background-3 {
-  background: #111216;
+  background: hsl(224deg, 12.5%, 7.5%);
 }
 
 .light_mode .background-3 {
-  background: #d4d7de;
+  background: hsl(224deg, 12.5%, 85%);
 }
 
 .default .background-4 {
-  background: #0b0c0e;
+  background: hsl(224deg, 12.5%, 5%);
 }
 
 .light_mode .background-4 {
-  background: #c6c9d2;
+  background: hsl(224deg, 12.5%, 80%);
 }
 
 .default .background-5 {
-  background: #060607;
+  background: hsl(224deg, 12.5%, 2.5%);
 }
 
 .light_mode .background-5 {
-  background: #b7bcc7;
+  background: hsl(224deg, 12.5%, 75%);
 }
 
 /* SPECIAL */
 .light_mode .brand {
-  color: white;
-  background-color: #f53d56 !important;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hwb(340 28% 12%) !important;
 }
 
 .default .brand {
-  color: white;
-  background-color: #e61a35 !important;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hwb(340 28% 16%) !important;
 }
 
-.default .nav-background, .default .primary-nav {
-  background: linear-gradient(180deg, rgba(24, 28, 40, 0.9) 0%, rgba(24, 28, 40, 0.1) 100%);
+.default .nav-background {
+  background: linear-gradient(180deg, hsla(224deg, 25%, 12.5%, 0.9) 0%, hsla(224deg, 25%, 12.5%, 0.1) 100%);
 }
 
-.light_mode .nav-background, .light_mode .primary-nav {
-  background: linear-gradient(180deg, rgba(239, 241, 245, 0.9) 0%, rgba(239, 241, 245, 0.1) 100%);
+.light_mode .nav-background {
+  background: linear-gradient(180deg, hsla(224deg, 25%, 95%, 0.9) 0%, hsla(224deg, 25%, 95%, 0.1) 100%);
 }
 
 .default .toggle-default {
-  background-color: #cccccc;
+  background-color: hsl(0deg, 0%, 80%);
 }
 
 .light_mode .toggle-default {
-  background-color: #333333;
+  background-color: hsl(0deg, 0%, 20%);
 }
 
 .default .toggle-hover {
-  background-color: white;
+  background-color: hsl(0deg, 0%, 100%);
 }
 
 .light_mode .toggle-hover {
-  background-color: black;
+  background-color: hsl(0deg, 0%, 0%);
 }
 
 body {
-  font-family: "Rubik", sans-serif;
+  background-color: hsl(0deg, 0%, 5%);
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   margin: 0;
   padding: 0;
 }
 
 *:focus {
-  outline-color: #fb5168;
-  outline-offset: -10px;
+  outline-color: hwb(340 28% 10%);
+  outline-offset: -5px;
+}
+
+.hidden {
+  opacity: 0;
+  position: absolute;
+  top: -20000000000px;
+  left: -20000000000px;
 }
 
 .primary-nav {
@@ -143,26 +151,30 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 4rem;
+  height: 3rem;
+  background-color: hsl(0deg, 0%, 80%);
   z-index: 100;
   backdrop-filter: blur(5px);
+  border: 1rem solid hsl(0deg, 0%, 5%);
 }
 .primary-nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   font-size: 1rem;
-  justify-content: right;
+  justify-content: left;
   margin: 0;
   padding: 0;
   height: 100%;
   text-transform: uppercase;
+  font-weight: 900;
+  font-size: larger;
 }
 .primary-nav ul li {
   position: relative;
   display: inline-block;
   height: 100%;
-  line-height: 4rem;
+  line-height: 3.1rem;
 }
 .primary-nav ul li:last-child {
   margin-right: 1rem;
@@ -173,72 +185,38 @@ body {
   height: 100%;
   padding: 0 1rem;
   text-decoration: none;
-  transition: color 200ms ease;
-  box-sizing: border-box;
-}
-.primary-nav ul li a:hover::after {
-  left: 0%;
-  right: 0%;
-}
-.primary-nav ul li a:focus::after {
-  left: 0%;
-  right: 0%;
-}
-.primary-nav ul li a::after {
-  content: "";
   transition: all 200ms ease;
-  position: absolute;
-  left: 100%;
-  right: 100%;
-  display: block;
-  height: 0.25rem;
-  background-color: #fb5168;
-  bottom: 0rem;
+  box-sizing: border-box;
+  color: hsl(0deg, 0%, 5%);
+}
+.primary-nav ul li a:hover, .primary-nav ul li a:focus {
+  filter: hue-rotate(-35deg);
 }
 .primary-nav ul li .toggle {
   display: block;
   width: 1rem;
   height: 1rem;
-  margin: 1.4rem 1rem;
+  margin: 1rem 1rem;
   padding: 0 2rem;
   text-decoration: none;
-  transition: color 200ms ease;
+  transition: all 200ms ease;
   box-sizing: border-box;
   outline-offset: 10px;
 }
-.primary-nav ul li .toggle:hover::after {
-  left: 0%;
-  right: 0%;
-}
-.primary-nav ul li .toggle:focus::after {
-  left: 0%;
-  right: 0%;
-}
-.primary-nav ul li .toggle::after {
-  content: "";
-  transition: all 200ms ease;
-  position: absolute;
-  left: 100%;
-  right: 100%;
-  display: block;
-  height: 0.25rem;
-  background-color: #fb5168;
-  bottom: 0rem;
-}
-
-.hidden {
-  opacity: 0;
-  position: absolute;
-  top: -20000000000px;
-  left: -20000000000px;
+.primary-nav ul li .toggle:hover, .primary-nav ul li .toggle:focus {
+  filter: hue-rotate(-35deg);
 }
 
 main {
-  height: auto;
-  margin: 5rem 2rem 2rem 2rem;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 1rem;
+  margin: 5rem 1rem 0rem;
+  background-color: hsl(0deg, 0%, 15%);
+}
+
+footer {
+  padding: 1rem;
+  margin: 0rem 1rem 1rem;
+  background-color: hsl(0deg, 0%, 10%);
 }
 
 .videoContainer {
@@ -247,7 +225,7 @@ main {
   position: relative;
   z-index: 1;
   width: 75%;
-  color: #e6e6e6;
+  color: hsl(0deg, 0%, 90%);
 }
 .videoContainer video {
   width: 100%;
@@ -337,34 +315,36 @@ main {
     grid-template-columns: 1fr 1fr;
   }
 }
-button,
-button:before {
-  background: #ea6e48;
-  background: -moz-linear-gradient(45deg, #ea6e48 0%, #bc1a63 100%);
-  background: -webkit-gradient(left bottom, right top, color-stop(0%, #ea6e48), color-stop(100%, #bc1a63));
-  background: -webkit-linear-gradient(45deg, #ea6e48 0%, #bc1a63 100%);
-  background: -o-linear-gradient(45deg, #ea6e48 0%, #bc1a63 100%);
-  background: -ms-linear-gradient(45deg, #ea6e48 0%, #bc1a63 100%);
-  background: linear-gradient(45deg, #ea6e48 0%, #bc1a63 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ea6e48", endColorstr="#bc1a63", GradientType=1 );
-}
-
-button:not(.accent) {
+button {
+  outline-offset: 10px !important;
   display: inline-block;
-  position: relative;
-  border-radius: 3px;
-  border: none;
-  text-decoration: none;
-  padding: 0.5em;
-  margin: 0.5em;
   font-weight: bold;
-  transition: all 0.5s;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  border-radius: 5px;
+  border: none;
+  background: #ea487e;
+  background: linear-gradient(45deg, #ea487e 0%, #bc1a27 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ea487e", endColorstr="#bc1a27", GradientType=1 );
+}
+button:before {
+  background: #ea487e;
+  background: linear-gradient(45deg, #ea487e 0%, #bc1a27 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ea487e", endColorstr="#bc1a27", GradientType=1 );
+}
+button:after {
+  background-color: #eb80a3;
+}
+button:not(.accent) {
+  color: transparent;
+  position: relative;
+  transition: all 0.2s, text-shadow 0.5s;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 button:not(.accent):hover {
-  text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.75);
+  text-shadow: 0px 0px 0px rgb(255, 255, 255);
+  filter: hue-rotate(-35deg);
 }
 button:not(.accent):hover:after {
   left: 100%;
@@ -382,7 +362,7 @@ button:not(.accent):after {
   right: 2px;
   z-index: -1;
   border-radius: 5px;
-  transition: all 0.5s;
+  transition: all 0.5s, background-color 0s;
 }
 button:not(.accent):before {
   content: "";
@@ -396,17 +376,10 @@ button:not(.accent):before {
   border-radius: 5px;
   transition: all 0.5s;
 }
-
 button.accent {
-  display: inline-block;
-  margin: 0.5em;
-  padding: 0.5em;
-  border-radius: 5px;
-  border: none;
   transition: all 0.5s;
   filter: hue-rotate(0deg);
   color: #fff;
-  text-decoration: none;
 }
 button.accent:hover {
   filter: hue-rotate(-35deg);
